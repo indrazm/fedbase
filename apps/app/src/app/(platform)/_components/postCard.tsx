@@ -12,8 +12,8 @@ interface PostCardProps {
 
 export const PostCard = (props: PostCardProps) => {
   return (
-    <div className="flex bg-gray-900 space-y-4 border-b border-gray-800">
-      <section className="flex-1 p-6 space-y-4">
+    <div className="flex bg-gray-900 not-last:border-b border-gray-800">
+      <section className="flex-1 p-5 space-y-4">
         <section className="flex gap-2 items-center">
           {props.isPinned && (
             <div className="flex items-center gap-1 text-xs bg-gray-800 text-gray-300 border border-gray-500 px-2 py-1 rounded-lg font-medium text-gray-">
