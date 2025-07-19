@@ -5,7 +5,8 @@
   "exports": {
     "./ui.css": "./dist/global.css",
     "./button": "./src/button/index.tsx",
-    "./input": "./src/input/index.tsx"
+    "./input": "./src/input/index.tsx",
+    "./category-badge": "./src/category-badge/index.tsx"
   },
   "scripts": {
     "build": "bunx @tailwindcss/cli -i ./src/global.css -o ./dist/global.css",
