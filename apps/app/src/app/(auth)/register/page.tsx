@@ -3,25 +3,28 @@
 import { Button } from "@repo/ui/button";
 import { Input } from "@repo/ui/input";
 import { useActionState } from "react";
-import { loginUserAction } from "./action";
+import Link from "next/link";
+import { registerUserAction } from "./action";
 
 export default function Page() {
-  const [_, action] = useActionState(loginUserAction, null);
+  const [_, action] = useActionState(registerUserAction, null);
 
   return (
-    <form action={action} className="space-y-6 w-80">
+    <form action={action} className="space-y-6 w-100">
       <section className="text-center space-y-2">
         <h3>fedbase.</h3>
-        <p>Login to your account</p>
+        <p>Create your account</p>
       </section>
-      <section className="space-y-2">
+      <section className="space-y-3">
+        <Input name="name" placeholder="Name" />
         <Input name="email" placeholder="Email address" />
         <Input name="password" placeholder="Password" type="password" />
+        <Button fullwidth>Register</Button>
       </section>
-      <Button fullwidth>Login</Button>
       <section className="text-center space-y-2">
-        <p>Forgot password?</p>
-        <p>Back to login options</p>
+        <p>
+          Already have an account? <Link href="/login">Login</Link>
+        </p>
       </section>
     </form>
   );

@@ -3,11 +3,16 @@ import { twMerge } from "tailwind-merge";
 import { tv, type VariantProps } from "tailwind-variants";
 
 const buttonVariants = tv({
-  base: "border flex justify-center shadow items-center gap-2 font-medium px-4 py-2 rounded-lg hover:opacity-90 transition duration-75 cursor-pointer",
+  base: "border text-sm flex justify-center shadow items-center gap-2 font-medium px-4 py-2.5 rounded-lg hover:opacity-90 transition duration-75 cursor-pointer",
   variants: {
     variant: {
       primary: "border-indigo-600 bg-indigo-600 text-white",
       outline: "border-gray-600 text-gray-200",
+    },
+    size: {
+      sm: "py-2 px-4",
+      md: "py-2.5 px-4",
+      lg: "py-3.5 px-4",
     },
     fullwidth: {
       true: "w-full",
@@ -16,6 +21,7 @@ const buttonVariants = tv({
   defaultVariants: {
     variant: "primary",
     fullwidth: false,
+    size: "md",
   },
 });
 
