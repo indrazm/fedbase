@@ -6,14 +6,14 @@ export default function Page() {
   return (
     <form className="space-y-6 w-100">
       <section className="text-center space-y-2">
-        <h3>fedbase.</h3>
+        <h3>Sign Up</h3>
         <p>Create your account</p>
       </section>
-      <section className="space-y-3">
+      <section className="space-y-2">
         <Input name="name" placeholder="Name" />
         <Input name="email" placeholder="Email address" />
         <Input name="password" placeholder="Password" type="password" />
-        <Button fullwidth>Register</Button>
+        <Button fullWidth>Register</Button>
       </section>
       <section className="text-center space-y-2">
         <p>

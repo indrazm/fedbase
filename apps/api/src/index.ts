@@ -3,8 +3,10 @@ import { authRouter } from "./router/auth";
 import { swagger } from "@elysiajs/swagger";
 import { profileRouter } from "./router/profile";
 import { feedbackRouter } from "./router/feedback";
+import { cors } from "@elysiajs/cors";
 
 const app = new Elysia()
+  .use(cors())
   .use(swagger())
   .get("/health", () => "ok")
   .use(authRouter)

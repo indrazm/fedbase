@@ -1,19 +1,1 @@
 @import "tailwindcss";
-
-@layer base {
-  body {
-    @apply bg-gray-950 text-gray-500;
-  }
-  h1 {
-    @apply text-4xl font-medium tracking-tight text-gray-200;
-  }
-  h2 {
-    @apply text-3xl font-medium tracking-tight text-gray-200;
-  }
-  h3 {
-    @apply text-2xl font-medium tracking-tight text-gray-200;
-  }
-  p {
-    @apply text-sm text-gray-400;
-  }
-}

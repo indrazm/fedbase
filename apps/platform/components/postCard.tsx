@@ -27,9 +27,9 @@ export const PostCard = (props: PostCardProps) => {
           <div className="text-sm">{props.description}</div>
         </div>
       </section>
-      <aside className="w-24 border-l border-gray-800 flex items-center justify-center">
-        <div className="text-center space-y-2 font-bold ">
-          <ArrowUp className="text-white" />
+      <aside className="w-24  flex items-center justify-center">
+        <div className="text-center text-sm space-y-2 font-bold ">
+          <ArrowUp size={16} className="text-white " />
           <div>{props.upvoteNumber}</div>
         </div>
       </aside>

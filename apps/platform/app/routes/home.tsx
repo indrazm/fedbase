@@ -36,7 +36,7 @@ export default function Page() {
     <main className="space-y-5">
       <section className="space-y-1 p-5 rounded-lg bg-indigo-600/50">
         <div className="text-xl font-medium text-white tracking-tight">Share your product feedback!</div>
-        <p className="text-indigo-200">Please tell us what we can do to make Featurebase the best product for you.</p>
+        <p className="text-indigo-200">Please tell us what we can do to make fedbase the best product for you.</p>
       </section>
       <section className="flex justify-between">
         <div className="flex gap-4">
