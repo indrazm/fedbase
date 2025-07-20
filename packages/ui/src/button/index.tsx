@@ -7,7 +7,7 @@ const buttonVariants = tv({
   variants: {
     variant: {
       primary: "border-indigo-600 bg-indigo-600 text-white",
-      outline: "border-gray-600 text-gray-200",
+      outline: "border-gray-800 text-gray-300 hover:bg-gray-800",
     },
     size: {
       sm: "py-2 px-4",

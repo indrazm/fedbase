@@ -1,16 +1,10 @@
-"use client";
-
 import { Button } from "@repo/ui/button";
 import { Input } from "@repo/ui/input";
-import { useActionState } from "react";
-import { loginUserAction } from "./action";
-import Link from "next/link";
+import { Link } from "react-router";
 
 export default function Page() {
-  const [_, action] = useActionState(loginUserAction, null);
-
   return (
-    <form action={action} className="space-y-6 w-100">
+    <form className="space-y-6 w-100">
       <section className="text-center space-y-2">
         <h3>fedbase.</h3>
         <p>Login to your account</p>
@@ -23,7 +17,7 @@ export default function Page() {
       <section className="text-center space-y-2">
         <p>Forgot password?</p>
         <p>
-          Don't have an account? <Link href="/register">Register</Link>
+          Don't have an account? <Link to="/register">Register</Link>
         </p>
       </section>
     </form>

@@ -1,7 +1,11 @@
+import type { Route } from "./+types/home";
 import { Button } from "@repo/ui/button";
+import { PostCard } from "components/postCard";
 import { ChartLine, Flame, Plus } from "lucide-react";
-import React from "react";
-import { PostCard } from "./_components/postCard";
+
+export function meta({}: Route.MetaArgs) {
+  return [{ title: "New React Router App" }, { name: "description", content: "Welcome to React Router!" }];
+}
 
 const dummyData = [
   {

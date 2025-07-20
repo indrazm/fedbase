@@ -1,7 +1,7 @@
 import { Newspaper, Bug, Lightbulb, MessageSquare, Star, Zap, Users, Settings } from "lucide-react";
 import React from "react";
 
-export default function Page() {
+export const Sidebar = () => {
   return (
     <div className="space-y-4 text-sm">
       <div className="text-gray-200 font-semibold tracking-tight">Boards</div>
@@ -41,4 +41,4 @@ export default function Page() {
       </section>
     </div>
   );
-}
+};
