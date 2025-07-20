@@ -1,5 +1,6 @@
 import type { Route } from "./+types/home";
 import { Button } from "@repo/ui/button";
+import { Dialog, DialogContent, DialogHeader, DialogTrigger } from "@repo/ui/dialog";
 import { PostCard } from "components/postCard";
 import { ChartLine, Flame, Plus } from "lucide-react";
 
@@ -49,10 +50,18 @@ export default function Page() {
             Most voted
           </Button>
         </div>
-        <Button size="sm">
-          <Plus size={16} />
-          Create new post
-        </Button>
+        <Dialog>
+          <DialogTrigger>
+            <Button size="sm">
+              <Plus size={16} />
+              Create new post
+            </Button>
+          </DialogTrigger>
+          <DialogContent>
+            <DialogHeader>Test</DialogHeader>
+            <div>Test Content</div>
+          </DialogContent>
+        </Dialog>
       </section>
       <section className="rounded-xl overflow-hidden border border-gray-800">
         {dummyData.map((item) => (

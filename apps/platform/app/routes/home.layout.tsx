@@ -4,6 +4,7 @@ import { Sidebar } from "./home.sidebar";
 import type { Route } from "./+types/home.layout";
 import { tokenCookie } from "./auth.login";
 import { api } from "lib/api";
+import { Avatar } from "radix-ui";
 
 export async function loader({ request }: Route.LoaderArgs) {
   const token = await tokenCookie.parse(request.headers.get("Cookie"));
@@ -28,7 +29,12 @@ export default function HomeLayout({ loaderData }: Route.ComponentProps) {
         <header className="flex justify-between items-center">
           <div className="text-xl tracking-wide text-white font-medium">fedbase.</div>
           {loaderData.user ? (
-            <div className="text-white font-medium text-sm">{loaderData.user.name}</div>
+            <div className="flex gap-2 items-center">
+              <div className="text-white font-medium text-sm">{loaderData.user.name}</div>
+              <Avatar.Root className="flex justify-center items-center w-6 h-6 rounded-full text-xs bg-indigo-600 text-white">
+                <Avatar.Fallback>{loaderData.user.name?.charAt(0)}</Avatar.Fallback>
+              </Avatar.Root>
+            </div>
           ) : (
             <Link to="/register">
               <Button size="sm" variant="outline">
